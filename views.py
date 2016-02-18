@@ -12,3 +12,8 @@ def index():
         pass
 
     return render_template('index.html', form=form)
+
+
+@app.route('/result/', methods=['GET', 'POST'])
+def result():
+    return render_template('result.html')    
