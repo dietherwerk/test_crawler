@@ -1,0 +1,45 @@
+/* Typograph */
+body{
+    padding-top: 0px;
+    background-color: #FFF;
+}
+
+th{
+    background-color: #798d8f;
+    text-align: center;
+    color: #EEEEEF;
+}
+
+h2{
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.tb-primary{
+    background-color: #DFEFEF;
+}
+
+/* Button Class */
+
+.content{
+    padding-bottom: 4em;
+}
+
+.footer{
+    text-align: center;
+    padding: 1em;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.form-div{
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.center{
+    text-align: center;
+    vertical-align: center;
+}

@@ -1,0 +1,8 @@
+Flask==0.10.1
+Flask-Script==2.0.5
+Flask-WTF==0.11
+future==0.15.0
+gunicorn==19.3.0
+ipdb==0.8
+ipython==4.0.0
+WTForms==2.0.2

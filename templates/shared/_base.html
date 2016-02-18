@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+    <title>TESTE WEBMOTORS</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="pt-br">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='customs/img/favicon.ico') }}" type="image/x-icon">
+
+    <!-- Components CSS -->
+    <link href="{{ url_for('static', filename='components/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='customs/css/default.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="col-xs-6">
+                
+            </div>
+            <div class="col-xs-6 right">
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        
+        {% block content %}{%endblock content %}
+    </div>
+
+<div class="container footer">
+    <hr>
+    2016 © Revolution Technology
+</div>
+</body>
+
+{% block scripts %}
+    <!-- Components JS -->
+    <script src="{{ url_for('static', filename='components/jquery/jquery-1.11.2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='components/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='customs/js/main.js') }}"></script>
+{% endblock scripts %}
