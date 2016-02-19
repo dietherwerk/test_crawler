@@ -6,3 +6,5 @@ gunicorn==19.3.0
 ipdb==0.8
 ipython==4.0.0
 WTForms==2.0.2
+beautifulsoup4==4.4.1
+requests==2.9.1

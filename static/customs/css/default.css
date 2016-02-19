@@ -75,8 +75,70 @@ h1{
     float: left;
 }
 
+
+
 .content-car .description{
     height: auto;
-    background: red;
+    background: #909394;
+    height: 240px;
 }
+
+.content-car .description .title{
+    color: #485e52;
+    float: left;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.content-car .description .subtitle{
+    margin-left: 20px;
+    float: left;
+    font-size: 13px;
+    color: #717373;
+}
+
+.content-car .description .container-items{
+    background: #c7c7c7 none repeat scroll 0 0;
+    float: left;
+    margin-top: 20px;
+    width: 57%;
+}
+
+.content-car .description .container-items .year{
+    margin-left: 55px;
+    float: left;
+    font-size: 14px;
+    color: #485e52;
+}
+
+.content-car .description .container-items .color{
+    color: #485e52;
+    float: right;
+    margin-left: 20px;
+    width: 47%;
+}
+
+.content-car .description .ribbon-gray-price{
+    background: gray none repeat scroll 0 0;
+    color: #ffffff;
+    float: left;
+    font-size: 20px;
+    height: 40px;
+    left: 15px;
+    line-height: 40px;
+    margin-top: 36px;
+    opacity: 1;
+    padding: 0 30px;
+    top: 200px;
+}
+
+.content-car .description .button-send{
+    float: right;
+    margin-right: 20px;
+    margin-top: 30px;
+    width: 20%;
+}
+
 

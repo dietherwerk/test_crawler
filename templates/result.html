@@ -2,21 +2,35 @@
 
 {%block title %}Home{% endblock title %}
 
-
 {% block content %}
 <div class="row">
-	<form method="post">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="content-car">
-				<img src="http://image.webmotors.com.br/_fotos/anunciousados/gigante/2016/201602/20160211/chevrolet-celta-1.0-mpfi-ls-8v-flex-2p-manual-wmimagem10334543584.jpg?s=fill&w=320&h=240">
-				<div class="description">asdasdasdas</div>
-			</div>				
-			<div class="content-car">
-				<img src="http://image.webmotors.com.br/_fotos/anunciousados/gigante/2016/201602/20160216/chevrolet-celta-1.0-mpfi-ls-8v-flex-2p-manual-wmimagem16084382780.jpg?s=fill&w=320&h=240">
-				<div class="description"></div>
-			</div>				
-		</div>				
-	</form>	
+	<div class="col-md-8 col-md-offset-2">
+	{% for car in cars %}
+		<div class="content-car">
+			<img src="{{ car.photo }}">
+			
+			<div class="description">
+				<span class="title">{{ car.title }}</span>
+				<span class="subtitle">{{ car.subtitle }}</span>
+				<div class="container-items">
+					<span class="year">ANO - {{ car.year }}</span>
+					<span class="color">COR - {{ car.color }}</span>
+					<span class="year">KM - {{ car.km }}</span>
+					<span class="color">CAMBIO - {{ car.cambio }}</span>	
+				</div>
+				<span class="ribbon-gray-price">{{ car.price }}</span>
+				<a href="{{ car.link }}" target="_blank">
+					<button class="btn btn-primary btn-lg btn-block button-send" role="button" type='button'>Ver anuncio</button>
+				</a>			
+			</div>
+		</div>
+	{% endfor %}
+		<div class="col-md-3 col-md-offset-4">
+			<a href="{{ url_for('index') }}" target="_blank">
+				<button class="btn btn-primary btn-lg btn-block button-send" role="button" type='button'>Refazer Busca</button>
+			</a>
+		</div>			
+	</div>					
 </div>
 
 {% endblock content %}
