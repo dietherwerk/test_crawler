@@ -8,10 +8,6 @@ def extract_data(url):
     soup = bs4.BeautifulSoup(response.text)
 
     #setting arrays
-    arrayTitles = []
-    arraySubtitles = []
-    arrayPhotos = []
-    arrayLinks = []
     arrayPrices = []
     arrayYear = []
     arrayColors = []
@@ -31,24 +27,19 @@ def extract_data(url):
 
     # Links
     links = soup.select('div#anuncios .tipo1')
-    for link in links:
-        arrayLinks.append(link.get('href'))
+    arrayLinks = [link.get('href') for link in links]
 
     # Titles
     titles = soup.select('div#anuncios .tipo1 .info .make-model')
-    for title in titles:
-        arrayTitles.append(title.get_text())
+    arrayTitles = [title.get_text() for title in titles]
 
     # Subtitles
     subtitles = soup.select('div#anuncios .tipo1 .info .version')
-    for subtitle in subtitles:
-        arraySubtitles.append(subtitle.get_text())
+    arraySubtitles = [subtitle.get_text() for subtitle in subtitles]
 
     # Photos
     photos = soup.select('div#anuncios .c-after .photo img')
-
-    for photo in photos:
-        arrayPhotos.append(photo.get('data-original'))
+    arrayPhotos = [photo.get('data-original') for photo in photos]
 
     # Price
     prices = soup.select('div#anuncios .c-after .photo .price')
