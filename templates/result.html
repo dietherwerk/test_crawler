@@ -27,6 +27,8 @@
 		</div>
 	{% endfor %}
 	</div>
+</div>
+<div class="row">
 	<h2>MERCADOLIVRE</h2>
 	<div class="col-md-8 col-md-offset-2">
 	{% for car in mercadolivre %}
@@ -47,6 +49,54 @@
 			</div>
 		</div>
 	{% endfor %}
+	</div>
+</div>
+<div class="row">	
+	<h2>OLX</h2>
+	<div class="col-md-8 col-md-offset-2">
+	{% for car in olx %}
+		<div class="content-car">
+			<img src="{{ car.photo }}" width="320" height="240">
+			
+			<div class="description">
+				<span class="title">{{ car.title }}</span>
+				<div class="container-items">
+					<span class="year">ANO - {{ car.year }}</span>
+					<span class="color">KM - {{ car.km }}</span>
+					<span class="year">CAMBIO - {{ car.cambio }}</span>	
+				</div>
+				<span class="ribbon-gray-price">{{ car.price }}</span>
+				<a href="{{ car.link }}" target="_blank">
+					<button class="btn btn-primary btn-lg btn-block button-send" role="button" type='button'>Ver anuncio</button>
+				</a>			
+			</div>
+		</div>
+	{% endfor %}
+	</div>
+</div>
+<div class="row">	
+	<h2>ICARROS</h2>
+	<div class="col-md-8 col-md-offset-2">
+	{% for car in icarros %}
+		<div class="content-car">
+			<img src="{{ car.photo }}">
+			<div class="description">
+				<span class="title">{{ car.title }}</span>
+				<span class="subtitle">{{ car.subtitle }}</span>
+				<div class="container-items">
+					<span class="year">ANO - {{ car.year }}</span>
+					<span class="color">COR - {{ car.color }}</span>
+					<span class="year">KM - {{ car.km }}</span>
+					<span class="color">CAMBIO - {{ car.cambio }}</span>	
+				</div>
+				<span class="ribbon-gray-price">{{ car.price }}</span>
+				<a href="{{ car.link }}" target="_blank">
+					<button class="btn btn-primary btn-lg btn-block button-send" role="button" type='button'>Ver anuncio</button>
+				</a>			
+			</div>
+		</div>
+	{% endfor %}
+	</div>
 		<div class="col-md-3 col-md-offset-4">
 			<a href="{{ url_for('index') }}">
 				<button class="btn btn-primary btn-lg btn-block button-send" role="button" type='button'>Refazer Busca</button>

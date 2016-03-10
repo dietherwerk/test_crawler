@@ -30,7 +30,7 @@ class WebmotorsCrawler(object):
 
     def extract_data(self):
         response = requests.get(self.get_final_url())
-        soup = bs4.BeautifulSoup(response.text)
+        soup = bs4.BeautifulSoup(response.text, "html.parser")
 
         # setting arrays
         arrayPrices = []
