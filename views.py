@@ -6,7 +6,8 @@ from crawlers.webmotors import WebmotorsCrawler
 from crawlers.mercadolivre import MercadolivreCrawler
 from crawlers.olx import OlxCrawler
 from crawlers.icarros import IcarrosCrawler
-
+from crawlers.meucarro import MeucarroCrawler
+from crawlers.compreauto import CompreautoCrawler
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -34,15 +35,24 @@ def result():
                      request.form['finalyear'])
 
     icarros = IcarrosCrawler(request.form['brand'],
-                     request.form['model'],
-                     request.form['inityear'],
-                     request.form['finalyear'])
+                             request.form['model'],
+                             request.form['inityear'],
+                             request.form['finalyear'])
 
+    meucarro = MeucarroCrawler(request.form['brand'],
+                               request.form['model'],
+                               request.form['inityear'],
+                               request.form['finalyear'])
 
-    icarros.extract_data()
+    compreauto = CompreautoCrawler(request.form['brand'],
+                                   request.form['model'],
+                                   request.form['inityear'],
+                                  request.form['finalyear'])
 
     return render_template('result.html',
                            webmotors=webmotors.extract_data(),
                            mercadolivre=mercadolivre.extract_data(),
                            olx=olx.extract_data(),
-                           icarros=icarros.extract_data())
+                           icarros=icarros.extract_data(),
+                           meucarro=meucarro.extract_data(),
+                           compreauto=compreauto.extract_data())
